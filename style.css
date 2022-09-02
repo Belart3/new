@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+body{
+    background-color: hsl(25, 85%, 87%);
+}
+button{
+    border: none;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+/* 1st design column (balance) */
+
+.balance{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(10, 79%, 65%);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 400px;
+}
+.balance .balance-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.balance .balance-info p{
+    color: #f7e4e4;
+    font-weight: 400px;
+    font-size: 15px;
+}
+.balance img{
+    cursor: pointer;
+    height: 35px;
+    transition: .2s;
+}
+.balance img:hover{
+    transform: scale(1.05);
+}
+.balance .balance-info h2{
+    color: #f7e4e4;
+    font-weight: 700px;
+    font-size: 25px;
+}
+
+/* 2nd design column (spendings) */
+
+.spendings{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(33, 100%, 98%);
+    max-width: 400px;
+    width: 400px;
+    border-radius: 12px;
+    padding: 25px;
+    row-gap: 20px;
+}
+.spendings p{
+    font-size: 22px;
+    color: hsl(58, 47%, 15%);
+    font-weight: 700;
+}
+.bar-chart-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+.bar-chart-container .bar-chart{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 10px;
+}
+.day-amount{
+    display: none;
+    position: relative;
+    right: 5px;
+    bottom: 30px;
+    background-color: hsl(25, 47%, 15%);
+    padding: 5px;
+    width: 50px;
+    height: 25px;
+    border-radius: 4px;
+}
+.bar-chart-container .bar-chart .day-amount .amount{
+    color: #f7e4e4;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+.bar-container{
+    height: 200px;
+    width: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.bars-mon, .bars-tue,.bars-wed,.bars-thu,.bars-fri,.bars-sat,.bars-sun{
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 4px;
+    transition: .2s;
+}
+.bars-mon{
+    height: 35%;
+}
+.bars-mon:hover{
+   background-color: hsl(9, 74%, 70%); 
+   cursor: pointer;
+}
+.bars-mon:active{
+   background-color: hsl(186, 34%, 60%);
+}
+.bars-tue{
+    height: 58%;
+}
+.bars-tue:hover{
+    background-color: hsl(9, 74%, 70%); 
+    cursor: pointer;
+ }
+ .bars-tue:active{
+    background-color: hsl(186, 34%, 60%);
+ }
+.bars-wed{
+    height: 70%;
+}
+.bars-wed:hover{
+    background-color: hsl(9, 74%, 70%); 
+    cursor: pointer;
+ }
+ .bars-wed:active{
+    background-color: hsl(186, 34%, 60%);
+ }
+.bars-thu{
+    height: 52%;
+}
+.bars-thu:hover{
+    background-color: hsl(9, 74%, 70%); 
+    cursor: pointer;
+ }
+ .bars-thu:active{
+    background-color: hsl(186, 34%, 60%);
+ }
+.bars-fri{
+    height: 40%;
+}
+.bars-fri:hover{
+    background-color: hsl(9, 74%, 70%); 
+    cursor: pointer;
+ }
+ .bars-fri:active{
+    background-color: hsl(186, 34%, 60%);
+ }
+.bars-sat{
+    height: 65%;
+}
+.bars-sat:hover{
+    background-color: hsl(9, 74%, 70%); 
+    cursor: pointer;
+ }
+ .bars-sat:active{
+    background-color: hsl(186, 34%, 60%);
+ }
+.bars-sun{
+    height: 50%;
+}
+.bars-sun:hover{
+    background-color: hsl(9, 74%, 70%); 
+    cursor: pointer;
+ }
+ .bars-sun:active{
+    background-color: hsl(186, 34%, 60%);
+ }
+ .bars-sun:hover > .day-amount{
+     display: block;
+ }
+ .bars-mon:hover > .day-amount{
+     display: block;
+ }
+ .bars-tue:hover > .day-amount{
+     display: block;
+ }
+ .bars-wed:hover > .day-amount{
+     display: block;
+ }
+ .bars-thu:hover > .day-amount{
+     display: block;
+ }
+ .bars-fri:hover > .day-amount{
+     display: block;
+ }
+ .bars-sat:hover > .day-amount{
+     display: block;
+ }
+.bar-chart  h4{
+    color: hsl(28, 10%, 53%);
+}
+.line{
+    height: .2px;
+    background-color: hsl(31, 25%, 82%);
+}
+.expenses{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.total-expenses p{
+    color: hsl(28, 10%, 53%);
+    font-size: 14px;
+}
+.total-expenses h2{
+    color: hsl(58, 47%, 15%);
+    font-size: 40px;
+}
+.expense-percentage h4{
+    color: hsl(58, 47%, 15%);
+    font-size: 14px;
+}
+.expense-percentage p{
+    color: hsl(28, 10%, 53%);
+    font-size: 14px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+    .attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
